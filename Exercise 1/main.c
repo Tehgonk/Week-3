@@ -18,13 +18,24 @@ int main() {
     // Seed random number generator
     srand(time(NULL));
     
-    for (int i = 0; i < 20; ++i) {
+    // Fill array with random number between 0 and N
+    for(int i = 0; i < 20; ++i) {
         arr[i] = rand() % (n + 1);
     }
 
-    for (int i = 0; i < 20; i++) {
+    min = arr[0];
+    for(int i = 0; i < 20; i++) {
+        if(arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    // For testing purposes
+    for(int i = 0; i < 20; i++) {
         printf("%d ", arr[i]);
     }
+    
+    printf("Smallest: %d", min);
     
 
   return 0;
