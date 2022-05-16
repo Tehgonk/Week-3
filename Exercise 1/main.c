@@ -13,7 +13,7 @@ int main() {
     int arr[20], n, min;
 
     printf("\nEnter a number: ");
-    scanf("%d", n);
+    scanf("%d", &n);
     
     // Seed random number generator
     srand(time(NULL));
@@ -23,7 +23,7 @@ int main() {
     }
 
     for (int i = 0; i < 20; i++) {
-        printf("%d", arr[i]);
+        printf("%d ", arr[i]);
     }
     
 
