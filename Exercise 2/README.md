@@ -3,12 +3,12 @@
 Write a program that allows a user to populate an array with 20 integer numbers. The program then asks the user to enter a number (at random) and searches how many instances of that number is found in the array and displays it on screen
 <br/><br/>
 ### Pseudocode
-- initialize `count` to 0
-- prompt user for twenty numbers, store in `numArr`
-- prompt user for number to search for in `numArr`
-  - loop through `numArr`
-  - if `userNum` equals `numArr[i]`, increment `count`
-- output the number of times `userNum` was found in `numArr`
+- initialize `count` to 0.
+- prompt user for twenty numbers, store in `numArr`.
+- prompt user for number to search for in `numArr`.
+  - loop through `numArr`.
+  - if `userNum` equals `numArr[i]`, increment `count`.
+- output the number of times `userNum` was found in `numArr`.
 <br/><br/>
 ### Flowchart
 ```mermaid
