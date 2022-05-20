@@ -22,7 +22,7 @@ int main() {
   }
 
   // find difference between userNum1, useNum2, save as diff
-  if (userNum > userNum2)
+  if (userNum1 > userNum2)
   {
       diff = userNum1 - userNum2;
   } else
@@ -31,7 +31,7 @@ int main() {
   }
   
   // test print
-  printf("diff: %d, n1: %d, n2: %d", diff, userNum1, userNum2);
+  //printf("diff: %d, n1: %d, n2: %d", diff, userNum1, userNum2);
   
 
   return 0;
