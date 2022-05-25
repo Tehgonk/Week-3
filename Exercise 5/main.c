@@ -14,6 +14,31 @@ int main() {
   printf("Enter the size of the array (m, n): ");
   scanf("%d %d", &m, &n);
 
+  // create and populate 2d array of size m, n
+  int arr[m][n];
+
+  for (int i = 0; i < m; i++)
+  {
+      for (int j = 0; j < n; j++)
+      {
+          printf("\nEnter a value for row %d, column %d: ", i, j);
+          scanf("%d", &arr[i][j]);
+      }
+      
+  }
+
+  // test print arr values
+  for (int i = 0; i < m; i++)
+  {
+      for (int j = 0; j < n; j++)
+      {
+          printf("%d ", arr[i][j]);
+          
+      }
+      
+  }
+  
+
   return 0;
   
 }
