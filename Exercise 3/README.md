@@ -1,89 +1,89 @@
-# Exercise 2: Finding the Instances of a Number in an Array
+# Exercise 3: Search for a Range of Numbers in an Array
 ### Description
-Write a program that allows a user to populate an array with 20 integer numbers. The program then asks the user to enter a number (at random) and searches how many instances of that number is found in the array and displays it on screen
+Populate a one dimensional array with 20 floating point numbers. The program then requests the user to enter 2 values L1 and L2 which represent a range such that L1 < L2 and 0 < (L1, L2) < maximum value in array. Your program then searches all the values in the range L1 >= value <= L2 and return the sum of these values.
 <br/><br/>
 ### Pseudocode
-- initialize `count` to 0.
-- prompt user for twenty numbers, store in `numArr`.
-- prompt user for number to search for in `numArr`.
-  - loop through `numArr`.
-  - if `userNum` equals `numArr[i]`, increment `count`.
-- output the number of times `userNum` was found in `numArr`.
+
 <br/><br/>
 ### Flowchart
-```mermaid
-graph TD
-LSTA[[loop 1 - populate array]]
-LSTA --> LPRO1[i = 0]
-LPRO1 --> LIF1{i < 20} -->|false| LRET[[return]]
-LIF1 -->|true| LIO[/"prompt: number<br>save: numArr[i]"/]
-LIO --> LPRO2[++i] -.-> LPRO1
 
-RSTA[[loop 2 - find instance count]]
-RSTA --> RPRO1[i = 0]
-RPRO1 --> RIF1{i < 0} -->|false| RRET[[return]]
-RIF1 -->|true| RIF2{"numArr[i] == userNum"}
-RIF2 -->|true| RPRO2[count++]
-RPRO2 --> RPRO3[++i] -.-> RPRO1
-```
 <br/><br/>
 ### Output
 ```
-C:\****\Week-3\Exercise 2>a
+C:\****\Week-3\Exercise 3>a
 
 Enter 20 numbers
-First number: 987
-Second number: 654
-Third number: 321
-Fourth number: 123
-Fifth number: 456
-Sixth number: 789
-Seventh number: 741
-Eighth number: 852
-Ninth number: 963
-Tenth number: 159
-Eleventh number: 263
-Twelfth number: 487
-Thirteenth number: 745
-Fourteenth number: 956
-Fifteenth number: 321
-Sixteenth number: 542
-Seventeenth number: 685
-Eighteenth number: 326
-Nineteenth number: 951
-Twentieth number: 625
 
-
-Enter a number to search: 354
-
-The number 354 appears 0 times in the array
-
-C:\****\Week-3\Exercise 2>a
-
-Enter 20 numbers
-First number: 51
-Second number: 32
-Third number: 95
-Fourth number: 62
-Fifth number: 84
-Sixth number: 75
-Seventh number: 41
-Eighth number: 84
-Ninth number: 32
+First number: 19.6
+Second number: 65.36
+Third number: 15.48
+Fourth number: 69.42
+Fifth number: 496.53
+Sixth number: 482.2
+Seventh number: 46.98
+Eighth number: 47.29
+Ninth number: 15.269
 Tenth number: 95
-Eleventh number: 68
-Twelfth number: 92
-Thirteenth number: 38
-Fourteenth number: 15
-Fifteenth number: 16
-Sixteenth number: 28
-Seventeenth number: 46
-Eighteenth number: 49
-Nineteenth number: 34
-Twentieth number: 17
+Eleventh number: 54.36
+Twelfth number: 25.5
+Thirteenth number: 16.36
+Fourteenth number: 98.5
+Fifteenth number: 84.12
+Sixteenth number: 64.25
+Seventeenth number: 12
+Eighteenth number: 149.2
+Nineteenth number: 65
+Twentieth number: 12.33
 
+Enter two positive values (L1, L2)
+L1 must be > 0 and < 496.53: 69.420
 
-Enter a number to search: 32
+L2 must be > 69.42 and < 496.53: 420
 
-The number 32 appears 2 times in the array
+Sum of values in range L1 to L2 is: 496.24
+
+C:\****\Week-3\Exercise 3>a
+
+Enter 20 numbers
+
+First number: 60
+...
+Twentieth number: 20
+
+Enter two positive values (L1, L2)
+L1 must be > 0 and < 60: 20
+
+L2 must be > 20 and < 60: 70
+
+Invalid value entered.
+
+C:\****\Week-3\Exercise 3>a
+
+Enter 20 numbers
+
+First number: 60
+...
+Twentieth number: 30
+
+Enter two positive values (L1, L2)
+L1 must be > 0 and < 60: 30
+
+L2 must be > 30 and < 60: 20
+
+Invalid value entered.
+
+C:\****\Week-3\Exercise 3>a
+
+Enter 20 numbers
+
+First number: 50
+...
+Twentieth number: 30
+
+Enter two positive values (L1, L2)
+L1 must be > 0 and < 50: -1
+
+L2 must be > -1 and < 50: 20
+
+Invalid value entered.
 ```
