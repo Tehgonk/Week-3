@@ -8,7 +8,11 @@
 
 int main() {
 
-  //CODE
+  // size of M and N
+  int m, n;
+
+  printf("Enter the size of the array (m, n): ");
+  scanf("%d %d", &m, &n);
 
   return 0;
   
