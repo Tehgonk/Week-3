@@ -1,6 +1,6 @@
-/* Exercise 3 - 
+/* Exercise 3 - Search for a Range of Numbers in an Array
  * Author: Daniel Geula
- * Date: 17/05/2022
+ * Date: 19/05/2022
  * Version: 1.0
  */
 
@@ -8,41 +8,52 @@
 
 int main() {
 
-    // initialize `count` to 0
-    float userNum, numArr[20];
+    
+    float L1, L2, max, sum = 0, numArr[20];
     char numStrings[20][20] = {"First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth", "Eleventh", "Twelfth", "Thirteenth", "Fourteenth", "Fifteenth", "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth", "Twentieth"};
 
     // prompt user for twenty numbers, store in `numArr`
-    printf("\nEnter 20 numbers\n");
+    printf("\nEnter 20 numbers\n\n");
     for (int i = 0; i < 20; ++i) 
     {
         printf("%s number: ", numStrings[i]);
         scanf("%f", &numArr[i]);
     }
 
-    /* // test print the values in `numArr`
-    printf("\nThe numbers in the array are:\n");
-    for (int i = 0; i < 20; ++i)
+    // Find largest number in array, save as `max`
+    max = numArr[0];
+    for (int i = 0; i < 20; i++) 
     {
-        printf("%g\n", numArr[i]);
-    } */
-
-
-
-    /* // prompt user for number to search for in `numArr`
-    printf("\n\nEnter a number to search: ");
-    scanf("%d", &userNum);
-
-    for (int i = 0; i < 20; ++i)
-    {
-        if (numArr[i] == userNum)
+        if (numArr[i] > max) 
         {
-            count++; // increment `count` if number is found
+            max = numArr[i];
         }
     }
 
-    // output the number of times `userNum` was found in `numArr`
-    printf("\nThe number %d appears %d times in the array\n", userNum, count); */
+    
+    // prompt user for two values (`L1` and `L2`)
+    printf("\nEnter two positive values (L1, L2)\n");
+    printf("L1 must be > 0 and < %g: ", max);
+    scanf("%f", &L1);
+    printf("\nL2 must be > %g and < %g: ", L1, max);
+    scanf("%f", &L2);
+
+    // check for invalid inputs
+    if (L1 < 0 || L1 > max || L2 < L1 || L2 > max)
+    {
+        printf("\nInvalid value entered.\n");
+        return 0;
+    }
+
+    
+    // loop through array and sum values between `L1` and `L2`
+    for (int i = 0; i < 20; i++) {
+		if (numArr[i] >= L1 && numArr[i] <= L2) {
+			sum += numArr[i];
+		}
+	}
+	
+	printf("\nSum of values in range L1 to L2 is: %g\n", sum);
 
   return 0;
   
