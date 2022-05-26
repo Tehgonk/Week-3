@@ -9,7 +9,7 @@
 int main() {
 
   // size of M and N
-  int m, n;
+  int m, n, sum = 0;
 
   printf("Enter the size of the array (m, n): ");
   scanf("%d %d", &m, &n);
@@ -23,20 +23,13 @@ int main() {
       {
           printf("\nEnter a value for row %d, column %d: ", i, j);
           scanf("%d", &arr[i][j]);
+          sum += arr[i][j];
       }
       
   }
 
-  // test print arr values
-  for (int i = 0; i < m; i++)
-  {
-      for (int j = 0; j < n; j++)
-      {
-          printf("%d ", arr[i][j]);
-          
-      }
-      
-  }
+  // print average
+  printf("\nArray average: %g\n", sum / (float)(m * n));
   
 
   return 0;
